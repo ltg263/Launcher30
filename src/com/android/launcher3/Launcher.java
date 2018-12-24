@@ -57,6 +57,7 @@ import android.os.SystemClock;
 import android.os.Trace;
 import android.os.UserHandle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.text.Selection;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -163,7 +164,7 @@ public class Launcher extends BaseActivity
                    AccessibilityManager.AccessibilityStateChangeListener,
                    WallpaperColorInfo.OnThemeChangeListener {
     public static final String TAG = "Launcher";
-    static final boolean LOGD = false;
+    static final boolean LOGD = true;
 
     static final boolean DEBUG_WIDGETS = false;
     static final boolean DEBUG_STRICT_MODE = false;
@@ -2608,6 +2609,7 @@ public class Launcher extends BaseActivity
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     private void startShortcutIntentSafely(Intent intent, Bundle optsBundle, ItemInfo info) {
         try {
             StrictMode.VmPolicy oldPolicy = StrictMode.getVmPolicy();

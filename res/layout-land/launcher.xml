@@ -44,12 +44,14 @@
 
         <include layout="@layout/gradient_bg" />
 
+        <!--右侧导航-->
         <!-- DO NOT CHANGE THE ID -->
         <include layout="@layout/hotseat"
             android:id="@+id/hotseat"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="right"
+            android:visibility="gone"
             launcher:layout_ignoreInsets="true" />
 
         <include

@@ -269,7 +269,6 @@ public class InvariantDeviceProfile {
     // Package private visibility for testing.
     ArrayList<InvariantDeviceProfile> findClosestDeviceProfiles(
             final float width, final float height, ArrayList<InvariantDeviceProfile> points) {
-
         // Sort the profiles by their closeness to the dimensions
         ArrayList<InvariantDeviceProfile> pointsByNearness = points;
         Collections.sort(pointsByNearness, new Comparator<InvariantDeviceProfile>() {
